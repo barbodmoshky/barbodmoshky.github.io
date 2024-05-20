@@ -1,0 +1,98 @@
+body {
+    background-color: #f5e6d4; /* Light brown */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #d3a07c; /* Brown */
+    padding: 20px;
+    color: white;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.composer-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.composer-section:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+}
+
+.composer-info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #ffddfc;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   button::before,
+   button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   button::before {
+    left: -10px;
+    background: #794309;
+   }
+   
+   button::after {
+    right: -10px;
+    background: #986c48;
+   }
+   
+   button:hover::before,
+   button:hover::after {
+    width: 58%;
+   }
+   
+   button:hover span {
+    color: #e8d2f5;
+    transition: 0.3s;
+   }
+   
+   button span {
+    color: #5e2403;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
+
+
+/* Keyframe animation for header fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
