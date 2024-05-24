@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Recommendations</title>
+    <title> پیشنهادات موسیقی باربد مشگی</title>
     <link rel="icon" type="image/x-icon" href="logo of my site.jpg">
-    <link rel="stylesheet" href="recommendations.css"> <!-- Link to your CSS file -->
     <style>
-        /* Additional styles for the page */
         body {
             background-color: #f5e6d4; /* Light brown */
             font-family: Arial, sans-serif;
             text-align: center;
+            color: #3c2f2f; /* Dark brown */
         }
         .container {
             max-width: 800px;
@@ -24,29 +23,266 @@
         .music-info {
             text-align: left;
             margin-top: 20px;
+            padding: 10px;
+            background-color: #ffffff; /* White */
+            border-radius: 10px;
+        }
+        .music-info img {
+            max-width: 100px;
+            border-radius: 10px;
         }
         .music-info h2 {
             color: #ffcccb; /* Very light pink */
+        }
+        .music-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .music-item:hover {
+            transform: scale(1.05);
+        }
+        .music-details {
+            margin-left: 20px;
+        }
+        audio {
+            margin-top: 10px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>My Music Recommendations</h1>
-        <audio controls>
-            <source src="01 Allegro (1).mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <h1>پیشنهادات موسیقی من</h1>
         <div class="music-info">
-            <h2>Recommended Track</h2>
-            <p>Artist: Johann Sebastian Bach</p>
-            <p>Title:Violin Concerto in A minor</p>
-            <p>Violin Concerto in A minor, BWV 1041 by Johann Sebastian Bach (1685-1750).
-                 Alfred Wallenstein (1898-1983) conducting the Los Angeles Philharmonic Orchestra. Jas
-                 cha Heifetz (1901-1987), violin. Recorded January 10, 1953 a
-                t the Republic Studios Sound Stage #9 in Los Angeles. Transfer from the ori
-                ginal RCA Victor mono LP LM-1818 by Bob Varney</p>
-        </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Retrato_de_Mozart%2C_por_Johann_Nepomuk_della_Croce_%28detalle%29.jpg" alt="Rondo Alla Turca">
+                <div class="music-details">
+                    <h2>Rondo Alla Turca</h2>
+                    <p>Wolfgang Amadeus Mozart</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Mozart_-_Piano_Sonata_No._11_in_A_major_-_III._Allegro_%28Turkish_March%29.ogg" type="audio/ogg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Chopin%2C_by_Wodzinska.JPG" alt="Waltz No. 19 in A minor">
+                <div class="music-details">
+                    <h2>Waltz No. 19 in A minor, Op. posth.</h2>
+                    <p>Frédéric Chopin</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f9/Chopin_-_Waltz_in_A_minor%2C_B_150.ogg/Chopin_-_Waltz_in_A_minor%2C_B_150.ogg.mp3" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Chopin%2C_by_Wodzinska.JPG" alt="Preludes, Op. 28: No. 4">
+                <div class="music-details">
+                    <h2>Preludes, Op. 28: No. 4</h2>
+                    <p>Frédéric Chopin</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/e/e8/FChopinPreludeOp28n4.OGG" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Liszt-kaulbach.jpg" alt="Liebestraum">
+                <div class="music-details">
+                    <h2>Liebestraum</h2>
+                    <p>Franz Liszt</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/0/02/Franz_Liszt_-_Liebestraum%2C_Ab_Major.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Chopin_portrait_1847.jpg" alt="Nocturne No. 20 in C-Sharp Minor">
+                <div class="music-details">
+                    <h2>Nocturne No. 20 in C-Sharp Minor</h2>
+                    <p>Frédéric Chopin</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/1/12/Chopin%2C_Nocturne_in_C-sharp_minor%2C_Op._Posth.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Portrait_of_Wolfgang_Amadeus_Mozart_at_the_age_of_13_in_Verona%2C_1770.jpg/220px-Portrait_of_Wolfgang_Amadeus_Mozart_at_the_age_of_13_in_Verona%2C_1770.jpg" alt="Symphony No. 40 in G Minor">
+                <div class="music-details">
+                    <h2>Symphony No. 40 in G Minor</h2>
+                    <p>Wolfgang Amadeus Mozart</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/1/16/Wolfgang_Amadeus_Mozart_-_Symphony_40_g-moll_-_4._Allegro_assai.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Vh9zsWr2vyV62dsHiCPEQBXRGBXHLYPmZZZq-9-TxQ&s" alt="Prelude in G Minor">
+                <div class="music-details">
+                    <h2>Prelude in G Minor, Op. 23, No. 5</h2>
+                    <p>Sergei Rachmaninoff</p>
+                    <audio controls>
+                        <source src="https://www.mfiles.co.uk/mp3-downloads/Rachmaninoff-Prelude-in-G-Minor.mp3" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMYRBjh50mCJK6Yc1TEubaxgKfgJldyf0qS0c2aBR49Q&s" alt="The Four Seasons, Violin Concerto in E">
+                <div class="music-details">
+                    <h2>The Four Seasons, Violin Concerto in E, Op. 8, No. 1, RV 269, 'Spring'</h2>
+                    <p>Antonio Vivaldi</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Vivaldi_-_Four_Seasons_1_Spring_mvt_1_Allegro_-_John_Harrison_violin.oga" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9NnPEPnp5_Wwcpm42SdfloMPazTBulW2lZk7fqwO1uA&s" alt="Hungarian Dance No. 5 in G Minor">
+                <div class="music-details">
+                    <h2>Hungarian Dance No. 5 in G Minor</h2>
+                    <p>Johannes Brahms</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d8/Johannes_Brahms_-_Ungarischer_Tanz_5_g-moll.ogg/Johannes_Brahms_-_Ungarischer_Tanz_5_g-moll.ogg.mp3" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Chopin_portrait_1847.jpg" alt="chopin photo">
+                <div class="music-details">
+                    <h2>Waltz Op. 70, No. 3 in D-flat major was composed in 1829</h2>
+                    <p>Frédéric Chopin</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3e/Chopin_Waltz_Op._70_no._3_in_D_flat_major_Olga_Gurevich.mp3/Chopin_Waltz_Op._70_no._3_in_D_flat_major_Olga_Gurevich.mp3.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Chopin_portrait_1847.jpg" alt="chopin photo">
+                <div class="music-details">
+                    <h2>Waltz Op. 70, No. 2, in F minor was composed in 1842</h2>
+                    <p>Frédéric Chopin</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fb/Chopin_Waltz_Op._70_no._2_in_F_minor_Olga_Gurevich.mp3/Chopin_Waltz_Op._70_no._2_in_F_minor_Olga_Gurevich.mp3.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Chopin_portrait_1847.jpg" alt="chopin photo">
+                <div class="music-details">
+                    <h2>Waltz in B minor, Op. 69, No. 2 composed in 1855 by his friend</h2>
+                    <p>Frédéric Chopin</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Chopin-waltz-op-69-no-2-in-b-minor.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWGpIz7_jn6D3PvHxhrtvn4FZvA8e23S-2yKi1nw2F8_SBQKMUIEjT4Rt5hdTXAHQIANg&usqp=CAU" alt="bach photo">
+                <div class="music-details">
+                    <h2>Toccata and Fugue in D minor, BWV 565</h2>
+                    <p>Johann Sebastian Bach</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/b/be/Toccata_et_Fugue_BWV565.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Bundesarchiv_Bild_183-77066-0002%2C_Berlin%2C_Deutsche_Staatsoper%2C_Festkonzert_David_Oistrach.jpg/640px-Bundesarchiv_Bild_183-77066-0002%2C_Berlin%2C_Deutsche_Staatsoper%2C_Festkonzert_David_Oistrach.jpg" alt="bach photo">
+                <div class="music-details">
+                    <h2>Violin Concerto in A minor, BWV 1041</h2>
+                    <p>Johann Sebastian Bach</p>
+                    <audio controls>
+                        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1d/Violin_Concerto_No.1_in_A_minor_-_I._Allegro_moderato_-_Chamber_Orchestra_-_United_States_Marine_Band.mp3/Violin_Concerto_No.1_in_A_minor_-_I._Allegro_moderato_-_Chamber_Orchestra_-_United_States_Marine_Band.mp3.ogg" type="audio/mpeg">
+                        مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                    </audio>
+                </div>
+            </div>
+                    <div class="music-item">
+                        <img src="https://pages.cs.wisc.edu/~boris/maha/music/images/beethoven_portrait.jpg" alt="bach photo">
+                        <div class="music-details">
+                            <h2>Piano Sonata No. 14 in C-sharp minor,(Moon light)1nd movement</h2>
+                            <p>Ludwig van Beethoven</p>
+                            <audio controls>
+                                <source src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Beethoven_Moonlight_1st_movement.ogg" type="audio/mpeg">
+                                مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                            </audio>
+                </div>
+            </div>
+        </audio>
+        <div class="music-item">
+            <img src="https://pages.cs.wisc.edu/~boris/maha/music/images/beethoven_portrait.jpg" alt="bach photo">
+            <div class="music-details">
+                <h2>Piano Sonata No. 14 in C-sharp minor,(Moon light)2nd movement</h2>
+                <p>Ludwig van Beethoven</p>
+                <audio controls>
+                    <source src="https://upload.wikimedia.org/wikipedia/commons/4/47/Beethoven_Moonlight_2nd_movement.ogg" type="audio/mpeg">
+                    مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+                </audio>
     </div>
-</body>
-</html>
+</div>
+</audio>
+<div class="music-item">
+    <img src="https://pages.cs.wisc.edu/~boris/maha/music/images/beethoven_portrait.jpg" alt="bach photo">
+    <div class="music-details">
+        <h2>Piano Sonata No. 14 in C-sharp minor,(Moon light)3nd movement</h2>
+        <p>Ludwig van Beethoven</p>
+        <audio controls>
+            <source src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Beethoven_Moonlight_3rd_movement.ogg" type="audio/mpeg">
+            مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+        </audio>
+</div>
+</div>
+<div class="music-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMYRBjh50mCJK6Yc1TEubaxgKfgJldyf0qS0c2aBR49Q&s" alt="The Four Seasons, Violin Concerto in E">
+    <div class="music-details">
+        <h2>Concerto No. 2 in G minor, "L'estate" (Summer)</h2>
+        <p>Antonio Vivaldi</p>
+        <audio controls>
+            <source src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Vivaldi_-_Four_Seasons_2_Summer_mvt_3_Presto_-_John_Harrison_violin.oga" type="audio/mpeg">
+            مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+        </audio>
+    </div>
+</div>
+<div class="music-item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMYRBjh50mCJK6Yc1TEubaxgKfgJldyf0qS0c2aBR49Q&s" alt="The Four Seasons, Violin Concerto in E">
+    <div class="music-details">
+        <h2>Concerto No. 3 in F major, "L'autunno" (Autumn)</h2>
+        <p>Antonio Vivaldi</p>
+        <audio controls>
+            <source src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Vivaldi_-_Four_Seasons_3_Autumn_mvt_3_Allegro_-_John_Harrison_violin.oga" type="audio/mpeg">
+            مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+        </audio>
+    </div>
+</div>
+<div class="music-item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMYRBjh50mCJK6Yc1TEubaxgKfgJldyf0qS0c2aBR49Q&s" alt="The Four Seasons, Violin Concerto in E">
+    <div class="music-details">
+        <h2>Concerto No. 4 in F minor, "L'inverno" (Winter)</h2>
+        <p>Antonio Vivaldi</p>
+        <audio controls>
+            <source src="https://upload.wikimedia.org/wikipedia/commons/b/b1/11_-_Vivaldi_Winter_mvt_2_Largo_-_John_Harrison_violin.ogg" type="audio/mpeg">
+            مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+        </audio>
+    </div>
+</div>
+
+    
+                
+                
+                    
+                </body>
+
+                </html>
