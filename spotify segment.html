@@ -4,105 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ساخت اکانت اسپاتیفای رایگان</title>
-    <link rel="icon" type="image/x-icon" href="spotify logo.png">
-    <style>
-        /* Include your CSS here */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            direction: rtl; /* Set direction to RTL for Persian */
-        }
-        h1, p, label {
-            
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        input[type="text"], input[type="email"], input[type="tel"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 30px;
-            border: 0;
-            position: relative;
-            overflow: hidden;
-            border-radius: 10rem;
-            transition: all 0.02s;
-            font-weight: bold;
-            color: rgb(37, 37, 37);
-            z-index: 0;
-            box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
-            cursor: pointer;
-            background: #fff;
-        }
-        .button:hover {
-            background: rgb(193, 228, 248);
-            color: rgb(33, 0, 85);
-        }
-        .button:active {
-            transform: scale(0.97);
-        }
-        .hoverEffect {
-            position: absolute;
-            bottom: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-        }
-        .hoverEffect div {
-            background: rgb(222, 0, 75);
-            background: linear-gradient(90deg, rgba(222, 0, 75, 1) 0%, rgba(191, 70, 255, 1) 49%, rgba(0, 212, 255, 1) 100%);
-            border-radius: 40rem;
-            width: 10rem;
-            height: 10rem;
-            transition: 0.4s;
-            filter: blur(20px);
-            animation: effect infinite 3s linear;
-            opacity: 0.5;
-        }
-        .button:hover .hoverEffect div {
-            width: 8rem;
-            height: 8rem;
-        }
-        @keyframes effect {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="spotify_logo.png">
+    <link rel="stylesheet" href="spotify.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
     <div class="container">
-        <h1 style="font-size: 25px;">به کاربران عزیز</h1>
+        <img src="https://seeklogo.com/images/S/spotify-logo-25A3D52D41-seeklogo.com.png" alt="Spotify Logo" class="spotify-logo">
+        <h1>به کاربران عزیز</h1>
         <p>با سلام و احترام،</p>
-        <p>من به عنوان مدیر وب‌سایت، امکان ایجاد حساب‌های Spotify رایگان را برای شما  با پرداخت فقط 20.000 تومان فراهم می‌کنم. این حساب‌ها بدون نیاز به پرداخت هفتگی یا ماهیانه عمل می‌کنند.</p>
+        <p>من به عنوان مدیر وب‌سایت، امکان ایجاد حساب‌های Spotify رایگان را برای شما با پرداخت فقط 20.000 تومان فراهم می‌کنم. این حساب‌ها بدون نیاز به پرداخت هفتگی یا ماهیانه عمل می‌کنند.</p>
         <p>در صورت تمایل به ایجاد حساب، لطفاً نام، ایمیل و شماره تماس خود را در فرم زیر وارد کنید:</p>
         <form id="contactForm" action="https://formspree.io/f/mleqknoy" method="post">
             <label for="name">نام:</label>
