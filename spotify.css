@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Spotify black background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #1DB954; /* Spotify green color */
+    overflow: hidden;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #2E2E2E; /* Slightly lighter black */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    direction: rtl; /* Set direction to RTL for Persian */
+    text-align: right;
+    position: relative;
+}
+
+.spotify-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: auto;
+}
+
+h1 {
+    font-size: 25px;
+    color: #1DB954; /* Spotify green color */
+    text-shadow: 0 0 5px #1DB954, 0 0 10px #1DB954, 0 0 15px #1DB954;
+}
+
+p, label {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff; /* White color for text */
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px; /* More rounded button */
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    color: #191414; /* Spotify black color */
+    background: #1DB954; /* Spotify green color */
+    cursor: pointer;
+    box-shadow: 0 0 10px #1DB954, 0 0 20px #1DB954, 0 0 30px #1DB954;
+    animation: pulse 1.5s infinite;
+}
+
+.button:hover {
+    background: #1aa34a; /* Slightly darker green */
+    color: #fff; /* White color */
+    box-shadow: 0 0 15px #1DB954, 0 0 30px #1DB954, 0 0 45px #1DB954;
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+.hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hoverEffect div {
+    background: rgba(30, 215, 96, 0.5); /* Spotify green with transparency */
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    transition: 0.4s;
+    filter: blur(10px);
+    animation: effect infinite 3s linear;
+    opacity: 0.7;
+}
+
+.button:hover .hoverEffect div {
+    width: 4rem;
+    height: 4rem;
+}
+
+@keyframes effect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #1DB954, 0 0 20px #1DB954, 0 0 30px #1DB954;
+    }
+    50% {
+        box-shadow: 0 0 15px #1DB954, 0 0 25px #1DB954, 0 0 35px #1DB954;
+    }
+    100% {
+        box-shadow: 0 0 10px #1DB954, 0 0 20px #1DB954, 0 0 30px #1DB954;
+    }
+}
