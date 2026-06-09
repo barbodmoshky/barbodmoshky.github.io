@@ -6,7 +6,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://barbodclassicalmusic.github.io",
+  site: "https://barbodmoshky.github.io/barbodclassicalmusic.github.io",
+  base: "barbodclassicalmusic.github.io",
   output: "static",
   integrations: [react(), mdx(), sitemap()],
 });
