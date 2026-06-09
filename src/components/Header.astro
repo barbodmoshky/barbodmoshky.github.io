@@ -1,6 +1,5 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
 ---
 
 <header>
@@ -11,17 +10,14 @@ import { SITE_TITLE } from "../consts";
         <li><HeaderLink href="/">صفحه اصلی</HeaderLink></li>
         <li><HeaderLink href="/about-me">درباره من</HeaderLink></li>
         <li>
-          <HeaderLink href="/youtube-videos">اجرا های من</HeaderLink>
-        </li>
-        <li>
           <HeaderLink href="/recommend">آهنگ‌های پیشنهادی</HeaderLink>
         </li>
         <li><HeaderLink href="/blog">وبلاگ</HeaderLink></li>
-        <li>
-          <HeaderLink href="/spotify-segment"
-            >ساخت اکانت اسپاتیفای</HeaderLink
-          >
-        </li>
+        <li><HeaderLink href="/poetry">اشعار</HeaderLink></li>
+        <li><HeaderLink href="/foreign-music">موسیقی خارجی</HeaderLink></li>
+        <li><HeaderLink href="/iranian-pop">پاپ ایرانی</HeaderLink></li>
+        <li><HeaderLink href="/biography">زندگی‌نامه</HeaderLink></li>
+        <li><HeaderLink href="/gallery">گالری عکس‌ها</HeaderLink></li>
         <li><HeaderLink href="/contact">تماس با من</HeaderLink></li>
       </ul>
     </nav>
@@ -31,9 +27,10 @@ import { SITE_TITLE } from "../consts";
 <style>
   /* هدر */
   header {
-    background-color: #3e2723;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
   }
 
   .container {

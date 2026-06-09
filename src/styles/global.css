@@ -17,8 +17,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #ede4d3;
-    color: #5a3e2b;  
+    background: linear-gradient(to bottom, #f8f9fa, #fff);
+    color: #333;  
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 20px;

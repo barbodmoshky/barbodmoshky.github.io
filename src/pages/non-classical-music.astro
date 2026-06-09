@@ -1,0 +1,133 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const SITE_TITLE = "موسیقی غیر کلاسیک | باربد مشکی";
+const SITE_DESCRIPTION = "پیشنهاداتی از دنیای موسیقی غیر کلاسیک؛ پاپ، جَز، فیلم و آهنگ‌های امروز.";
+---
+
+<!doctype html>
+<html lang="fa">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="container">
+      <section class="intro">
+        <h1>موسیقی غیر کلاسیک</h1>
+        <p>
+          این بخش برای علاقه‌مندان به موسیقی‌های معاصر، پاپ، جَز، فیلم و ریمیکس‌های
+          ملودی‌های محبوب طراحی شده است.
+        </p>
+      </section>
+
+      <section class="content-card">
+        <h2>آهنگ‌های پیشنهادی</h2>
+        <ul>
+          <li>
+            <strong>City of Stars</strong> — موسیقی متن فیلم
+            <a href="https://youtu.be/tn9lBE04B7o" target="_blank">پخش</a>
+          </li>
+          <li>
+            <strong>Someone Like You</strong> — آدل
+            <a href="https://youtu.be/hLQl3WQQoQ0" target="_blank">پخش</a>
+          </li>
+          <li>
+            <strong>Feeling Good</strong> — نات کینگ کول
+            <a href="https://youtu.be/D5Y11hwjMNs" target="_blank">پخش</a>
+          </li>
+          <li>
+            <strong>بهترین‌های امروز</strong> — مجموعه‌ای از ملودی‌های آرامش‌بخش و
+            انرژی‌بخش
+          </li>
+        </ul>
+      </section>
+
+      <section class="notes">
+        <h2>چرا موسیقی غیر کلاسیک؟</h2>
+        <p>
+          موسیقی غیر کلاسیک به ما اجازه می‌دهد فراتر از سازهای سنتی حرکت کنیم و
+          با ریتم‌های مدرن، متن‌های احساسی و فضای بصری نو آشنا شویم.
+        </p>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "B Nazanin", sans-serif;
+    background: #f5f0eb;
+    color: #333;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .intro h1,
+  .content-card h2,
+  .notes h2 {
+    color: #512a26;
+  }
+
+  .intro p,
+  .notes p {
+    line-height: 1.8;
+    color: #4d3d3a;
+  }
+
+  .content-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 30px 0;
+  }
+
+  .content-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .content-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e6d7cc;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .content-card li:last-child {
+    border-bottom: none;
+  }
+
+  .content-card a {
+    color: #795548;
+    text-decoration: none;
+  }
+
+  .content-card a:hover {
+    text-decoration: underline;
+  }
+
+  .notes {
+    background: #fbf5f0;
+    border-radius: 18px;
+    padding: 22px;
+  }
+
+  @media (max-width: 768px) {
+    .content-card li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

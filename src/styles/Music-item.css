@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap');
 
 :root {
-  --bg-light: #ffe5c6;
-  --bg-dark: #3c2f2f;
-  --text-light: #222;
-  --text-dark: #eee;
+  --bg-light: #f8f9fa;
+  --bg-dark: #667eea;
+  --text-light: #333;
+  --text-dark: #fff;
   --card-bg-light: #ffffff;
-  --card-bg-dark: #2a2a35;
-  --accent-color: #ffbc9f;
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-dark: rgba(0, 0, 0, 0.5);
+  --card-bg-dark: #667eea;
+  --accent-color: #667eea;
+  --shadow-light: rgba(102, 126, 234, 0.1);
+  --shadow-dark: rgba(102, 126, 234, 0.3);
 }
 
 body {
@@ -27,7 +27,10 @@ h1 {
   font-size: 42px;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: var(--accent-color);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .container {
@@ -44,15 +47,17 @@ h1 {
   gap: 1rem;
   background-color: var(--card-bg-light);
   border-radius: 1.25rem;
-  box-shadow: 0 4px 12px var(--shadow-light);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
   padding: 1.5rem;
   margin-bottom: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(102, 126, 234, 0.1);
 }
 
 .music-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 24px var(--shadow-light);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
 }
 
 .music-item img {

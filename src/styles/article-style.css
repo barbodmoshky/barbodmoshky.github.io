@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background: linear-gradient(to bottom, #f8f9fa, #fff);
   margin: 0;
   padding: 0;
   text-align: right;
@@ -11,8 +11,8 @@ body {
   max-width: 800px;
   margin: 20px auto;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background: #f4f4f4;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
 }
 
 .blog-header img {
@@ -29,6 +29,7 @@ body {
   height: auto;
   border-radius: 8px;
   margin-top: 20px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
 }
 
 .blog-header-content {
@@ -39,13 +40,17 @@ body {
 .blog-header h1 {
   font-size: 2rem;
   margin: 0;
-  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .blog-header .date {
-  color: #666;
+  color: #667eea;
   font-size: 0.9rem;
   margin-top: 10px;
+  font-weight: 600;
 }
 
 .blog-content {
@@ -55,14 +60,77 @@ body {
 }
 
 .blog-content h2 {
-  color: #007bff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-top: 20px;
+}
+
+/* Audio Section */
+.audio-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px 20px;
+  margin: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.audio-section h2 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.audio-player::-webkit-media-controls-panel {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Lyrics Section */
+.lyrics-section {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  padding: 30px 20px;
+  margin: 20px;
+  border-radius: 12px;
+  border-right: 4px solid #667eea;
+}
+
+.lyrics-section h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.lyrics-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 2;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 footer {
   text-align: center;
   padding: 10px;
-  background: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
   margin-top: 20px;
 }

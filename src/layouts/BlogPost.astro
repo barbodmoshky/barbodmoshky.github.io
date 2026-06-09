@@ -5,9 +5,11 @@ interface Props {
   description: string;
   pubDate?: Date;
   heroImage?: string;
+  audioUrl?: string;
+  lyrics?: string;
 }
 
-const { title, description, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage, audioUrl, lyrics } = Astro.props;
 ---
 
 <html lang="fa">
@@ -40,9 +42,30 @@ const { title, description, pubDate, heroImage } = Astro.props;
           alt={title || "تصویر نامشخص"}
         />
       </header>
+
+      {audioUrl && (
+        <section class="audio-section">
+          <h2>🎵 گوش‌کردن به آهنگ</h2>
+          <audio controls class="audio-player">
+            <source src={audioUrl} type="audio/mpeg" />
+            مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+          </audio>
+        </section>
+      )}
+
       <main class="blog-content">
         <slot />
       </main>
+
+      {lyrics && (
+        <section class="lyrics-section">
+          <h2>📝 متن آهنگ</h2>
+          <div class="lyrics-content">
+            {lyrics}
+          </div>
+        </section>
+      )}
+
       <footer>
         <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
       </footer>

@@ -6,187 +6,228 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fa">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <Header />
     <section class="hero">
-      <h1>به دنیای موسیقی کلاسیک خوش آمدید</h1>
-      <p>کاوشی در دنیای موسیقی فاخر و بی‌نظیر کلاسیک</p>
-      <a id="composers-link" href="#composers" class="btn smooth-scroll-link"
-        >بیشتر بخوانید</a
-      >
-    </section>
-
-    <section id="composers" class="composers">
-      <h2>آهنگسازان بزرگ</h2>
-      <div class="composer-list">
-        <div class="composer">
-          <img src="mozart.jpg" alt="ولفگانگ آمادئوس موتسارت" />
-          <h3>ولفگانگ آمادئوس موتسارت</h3>
-          <p>.یکی از بزرگ‌ترین آهنگسازان تاریخ</p>
-          <a href="mozart.html" class="btn">بیشتر بخوانید</a>
-        </div>
-        <div class="composer">
-          <img src="bach.jpg" alt="یوهان سباستین باخ" />
-          <h3>یوهان سباستین باخ</h3>
-          <p>.استاد بی‌بدیل موسیقی باروک</p>
-          <a href="bach.html" class="btn">بیشتر بخوانید</a>
-        </div>
-        <div class="composer">
-          <img src="beethoven.jpg" alt="لودویگ فان بتهوون" />
-          <h3>لودویگ فان بتهوون</h3>
-          <p>.یکی از تأثیرگذارترین موسیقی‌دانان تاریخ</p>
-          <a href="beethoven.html" class="btn">بیشتر بخوانید</a>
-        </div>
+      <div class="hero-content">
+        <h1>موسیقی، شعر و هنر</h1>
+        <p>کاوش در دنیای بی‌کران موسیقی و شعر</p>
       </div>
     </section>
 
-    <section class="playlist">
-      <h2>پلی‌لیست پیشنهادی</h2>
-      <ul>
-        <li>سمفونی شماره 40 - <a href="mozart/symphomy40.html">پخش</a></li>
-        <li>
-          فوگ در ر مینور - <a
-            href="https://youtu.be/ho9rZjlsyYY?si=OJIZ_XnVn29TGyBR">پخش</a
-          >
-        </li>
-        <li>
-          سمفونی شماره 5 - <a
-            href="https://youtu.be/n3EiRynr1Us?si=uEIMnRUKnd7HgwVF">پخش</a
-          >
-        </li>
-      </ul>
+    <section class="featured-sections">
+      <div class="feature-card">
+        <div class="icon">🎼</div>
+        <h2>موسیقی کلاسیک</h2>
+        <p>آثار ماندگار آهنگسازان بزرگ از باخ تا بتهوون</p>
+        <a href="/recommend" class="btn">بیشتر بخوانید</a>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🎤</div>
+        <h2>پاپ و موسیقی جهانی</h2>
+        <p>موسیقی ایرانی، جَز، آهنگ‌های معروف و کلاسیک‌های معاصر</p>
+        <a href="/foreign-music" class="btn">بیشتر بخوانید</a>
+      </div>
+      <div class="feature-card">
+        <div class="icon">✍️</div>
+        <h2>اشعار و نوشته‌ها</h2>
+        <p>شعرهای شخصی و متون ادبی که به روح موسیقی بافته‌شده‌اند</p>
+        <a href="/poetry" class="btn">خواندن اشعار</a>
+      </div>
     </section>
     <Footer />
   </body>
 </html>
 
 <style>
-  /* بخش معرفی */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* Hero Section */
   .hero {
-    background-image: url("piano-background.jpg");
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    animation: float 8s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #ffcc80;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -1px;
   }
 
   .hero p {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fcbc5c;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background-origin: padding-box;
-    padding: 10px;
-    border-radius: 5px;
-    line-height: 2;
-    max-width: 800px;
-    margin: 0 auto 20px;
+    font-size: 1.3rem;
+    opacity: 0.95;
+    font-weight: 300;
+  }
+
+  /* Featured Sections */
+  .featured-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #f8f9fa, #fff);
+  }
+
+  .feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+  }
+
+  .icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .feature-card h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .feature-card p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    font-size: 0.95rem;
   }
 
   .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #795548;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition:
-      transform 0.3s ease,
-      background-color 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
   }
 
   .btn:hover {
-    background-color: #a1887f;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
   }
 
-  /* بخش آهنگسازان */
-  .composer-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    flex-wrap: wrap; /* اضافه کردن برای نمایش بهتر در گوشی */
-  }
-
-  .composer {
-    background: #d7ccc8;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%; /* تغییر عرض برای نمایش بهتر در گوشی */
-    max-width: 250px; /* حداکثر عرض برای جلوگیری از بزرگ شدن بیش از حد */
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .composer:hover {
-    transform: translateY(-5px);
-  }
-
-  .composer img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .playlist {
-    padding: 40px 20px;
-  }
-
-  .playlist ul {
-    list-style: none;
-  }
-
-  /* مدیا کوئری‌ها برای نمایش بهتر در گوشی */
+  /* Responsive */
   @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-
     .hero {
-      padding: 50px 20px;
+      padding: 80px 20px;
     }
 
     .hero h1 {
-      font-size: 28px;
+      font-size: 2rem;
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 1rem;
     }
 
-    .composer-list {
-      flex-direction: column;
+    .featured-sections {
+      padding: 50px 20px;
       gap: 20px;
     }
 
-    .composer {
-      width: 100%;
-      max-width: none;
+    .feature-card {
+      padding: 30px 20px;
+    }
+
+    .feature-card h2 {
+      font-size: 1.2rem;
     }
 
     .btn {
-      width: 100%;
-      max-width: 200px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+
+    .hero p {
+      font-size: 0.9rem;
+    }
+
+    .feature-card {
+      padding: 20px 15px;
+    }
+
+    .icon {
+      font-size: 2.5rem;
     }
   }
 </style>

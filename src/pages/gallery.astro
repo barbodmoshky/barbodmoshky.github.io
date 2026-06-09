@@ -1,0 +1,81 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION } from "../consts";
+import galleryPhotos from "../data/gallery-photos.js";
+import PhotoItem from "../components/PhotoItem.jsx";
+---
+
+<!doctype html>
+<html lang="fa">
+  <head>
+    <BaseHead title={"گالری عکس‌ها - باربد مشکی"} description={SITE_DESCRIPTION} />
+    <link rel="stylesheet" href="/src/styles/Gallery.css" />
+  </head>
+  <body>
+    <Header />
+
+    <div class="gallery-container">
+      <div class="gallery-header">
+        <h1>گالری عکس‌ها</h1>
+        <p>لحظاتی از زندگی من و لحظات خاص مرتبط با موسیقی و پیانو</p>
+      </div>
+
+      <div class="gallery-grid">
+        {galleryPhotos.length > 0 ? (
+          galleryPhotos.map((photo) => (
+            <PhotoItem
+              imgSrc={photo.imgSrc}
+              imgAlt={photo.imgAlt}
+              title={photo.title}
+              description={photo.description}
+              date={photo.date}
+            />
+          ))
+        ) : (
+          <div class="empty-gallery">
+            <p>عکسی هنوز آپلود نشده است. بزودی...</p>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  body {
+    direction: rtl;
+  }
+
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .gallery-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-header p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+
+  .empty-gallery {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+    font-size: 1.2rem;
+  }
+</style>
