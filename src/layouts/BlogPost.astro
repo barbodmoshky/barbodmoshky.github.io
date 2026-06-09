@@ -1,5 +1,7 @@
 ---
 // filepath: c:\Users\ASUS\Desktop\astro-project\barbodclassicalmusic.github.io\src\layouts\BlogPostLayout.astro
+import '../styles/article-style.css';
+
 interface Props {
   title: string;
   description: string;
@@ -18,7 +20,6 @@ const { title, description, pubDate, heroImage, audioUrl, lyrics } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="stylesheet" href="/src/styles/article-style.css" />
   </head>
   <body>
     <article class="blog-post">

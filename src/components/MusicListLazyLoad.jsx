@@ -3,7 +3,7 @@ import MusicItem from "./MusicItem";
 import musicData from "../data/music-recommendations";
 
 function MusicListLazyLoad() {
-  const [visibleCount, setVisibleCount] = useState(10);
+  const [visibleCount, setVisibleCount] = useState(musicData.length);
 
   useEffect(() => {
     const handleScroll = () => {
